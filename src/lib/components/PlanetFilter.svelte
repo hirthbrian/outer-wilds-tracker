@@ -22,14 +22,14 @@
 </script>
 
 <div class="filter-bar">
-	<span class="filter-label">FILTER</span>
+	<span class="filter-label">PLANET</span>
 	<div class="filter-buttons">
 		{#each planets as planet}
 			<button
 				class="filter-btn"
 				class:active={selected === planet}
 				onclick={() => onselect(planet)}
-				style="--planet-color: {planetColors[planet] ?? '#e8e0cc'}"
+				style="--planet-color: {planetColors[planet] ?? '#f5f5f5'}"
 			>
 				<span class="dot"></span>
 				{planet}
@@ -42,38 +42,41 @@
 	.filter-bar {
 		display: flex;
 		align-items: center;
-		gap: 1rem;
+		gap: var(--space-4);
 		flex-wrap: wrap;
 	}
 
 	.filter-label {
-		font-size: 0.65rem;
-		font-weight: 600;
-		letter-spacing: 0.15em;
+		font-family: var(--font-body);
+		font-size: 0.6rem;
+		font-weight: 700;
+		letter-spacing: 0.18em;
 		color: var(--text-dim);
 		flex-shrink: 0;
 	}
 
 	.filter-buttons {
 		display: flex;
-		gap: 0.5rem;
+		gap: var(--space-2);
 		flex-wrap: wrap;
 	}
 
 	.filter-btn {
 		display: inline-flex;
 		align-items: center;
-		gap: 0.4rem;
-		padding: 0.35rem 0.85rem;
-		border-radius: 20px;
-		font-size: 0.8rem;
-		font-weight: 500;
+		gap: var(--space-2);
+		height: 32px;
+		padding: 0 var(--space-3);
+		border-radius: var(--radius);
+		font-family: var(--font-body);
+		font-size: 0.7rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
 		cursor: pointer;
-		border: 1px solid var(--border);
+		border: 2px solid var(--border);
 		background: transparent;
 		color: var(--text-muted);
-		transition: all 0.15s ease;
-		font-family: inherit;
+		transition: all 0.12s ease;
 	}
 
 	.filter-btn:hover {
@@ -81,9 +84,14 @@
 		color: var(--text);
 	}
 
+	.filter-btn:focus-visible {
+		outline: 2px solid var(--primary);
+		outline-offset: 2px;
+	}
+
 	.filter-btn.active {
 		border-color: var(--planet-color);
-		background: color-mix(in srgb, var(--planet-color) 12%, transparent);
+		background: color-mix(in srgb, var(--planet-color) 14%, transparent);
 		color: var(--text);
 	}
 
@@ -93,7 +101,7 @@
 		border-radius: 50%;
 		background: var(--planet-color);
 		opacity: 0.5;
-		transition: opacity 0.15s ease;
+		transition: opacity 0.12s ease;
 		flex-shrink: 0;
 	}
 

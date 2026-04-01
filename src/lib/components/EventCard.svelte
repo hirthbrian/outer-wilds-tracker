@@ -53,7 +53,6 @@
 			{#if event.ongoing && event.endSeconds}
 				<span class="time-end">→ {formatTime(event.endSeconds)}</span>
 			{/if}
-			<span class="planet-tag" style="--color: {color}">{event.planet}</span>
 			{#if status === 'active' && event.ongoing}
 				<span class="ongoing-tag">ONGOING</span>
 			{/if}
@@ -165,19 +164,6 @@
 		font-size: 0.7rem;
 		font-weight: 500;
 		color: var(--text-dim);
-	}
-
-	.planet-tag {
-		font-family: var(--font-body);
-		font-size: 0.6rem;
-		font-weight: 700;
-		letter-spacing: 0.12em;
-		text-transform: uppercase;
-		color: var(--color);
-		background: color-mix(in srgb, var(--color) 10%, transparent);
-		border: 1px solid color-mix(in srgb, var(--color) 28%, transparent);
-		padding: 2px 6px;
-		border-radius: var(--radius);
 	}
 
 	.ongoing-tag {

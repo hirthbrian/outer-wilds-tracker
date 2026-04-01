@@ -9,11 +9,15 @@
 	let { selected, onselect }: Props = $props();
 
 	const planetColors: Record<string, string> = {
-		'Timber Hearth': '#4caf50',
+		All: '#4fc3f7',
 		'Ash Twin': '#f5a623',
+		'Ember Twin': '#ff6f00',
 		'Brittle Hollow': '#ab47bc',
-		Sun: '#ff7043',
-		All: '#4fc3f7'
+		'Timber Hearth': '#4caf50',
+		"Giant's Deep": '#1976d2',
+		Interloper: '#90a4ae',
+		'The Stranger': '#8d6e63',
+		'Sun Station': '#f44336'
 	};
 </script>
 

@@ -72,3 +72,8 @@ Events live in `src/lib/events.ts` as a plain array. Each event:
 ```
 
 Adding a new planet requires updating both the `events` array and the `planets` array, and adding a color entry to the `planetColors` records in `PlanetFilter.svelte` and `EventCard.svelte`.
+
+## External resources
+
+- **Planet SVG icons**: https://github.com/RiosDeterioratingMentalHealth/OuterWildsPlanetIcons — downloaded to `src/lib/assets/planets/`. Pick the highest-versioned non-`_wip` file when adding new icons.
+- **Event timing data source**: https://github.com/clubby789/OWClock/blob/master/ClockLib/events.json
